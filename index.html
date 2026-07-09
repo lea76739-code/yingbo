@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navbar-height: 38px;
+      --bottom-image-height: calc(100vw * 201 / 1280);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding-top: var(--navbar-height);
+      padding-bottom: var(--bottom-image-height);
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #2d2400;
+      background: #ffb80c;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--navbar-height);
+      padding: 4px clamp(18px, 5vw, 72px);
+      background: #ffb80c;
+      border-bottom: 1px solid rgba(45, 36, 0, 0.12);
+      box-shadow: 0 8px 24px rgba(111, 88, 0, 0.12);
+    }
+
+    .logo {
+      display: block;
+      width: 75px;
+      height: auto;
+    }
+
+    .hero {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .image-showcase {
+      display: grid;
+      gap: 0;
+    }
+
+    .image-showcase img {
+      display: block;
+      width: 100%;
+      max-height: calc(100vh - var(--navbar-height) - var(--bottom-image-height));
+      height: auto;
+      border-radius: 0;
+      box-shadow: 0 18px 44px rgba(93, 72, 0, 0.22);
+      background: #f3bd00;
+      object-fit: contain;
+    }
+
+    .image-showcase img:first-child {
+      width: 100%;
+      height: auto;
+    }
+
+    .official-address {
+      margin: 34px 0 0;
+      text-align: center;
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 700;
+      color: #2d2400;
+    }
+
+    .official-description {
+      width: min(980px, calc(100% - 32px));
+      margin: 18px auto 42px;
+      color: #2d2400;
+      font-size: clamp(9px, 1.35vw, 11px);
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    .official-description p {
+      margin: 0 0 14px;
+    }
+
+    .address-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      width: min(900px, calc(100% - 32px));
+      margin: 20px auto 22px;
+    }
+
+    .address-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: clamp(38px, 7vw, 50px);
+      padding: clamp(8px, 2vw, 12px) clamp(10px, 2.5vw, 22px);
+      border: 1px solid rgba(45, 36, 0, 0.5);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffe66b 0%, #ffc321 48%, #d89000 100%);
+      color: #231a00;
+      font-size: clamp(13px, 2.8vw, 22px);
+      font-weight: 800;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.62),
+        0 8px 18px rgba(45, 36, 0, 0.18);
+    }
+
+    .address-button:hover {
+      background: linear-gradient(180deg, #fff08a 0%, #ffca2e 48%, #df9700 100%);
+    }
+
+    .fixed-bottom-image {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      display: block;
+      width: 100%;
+      height: var(--bottom-image-height);
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .navbar {
+        align-items: center;
+      }
+
+      .logo {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" aria-label="">
+      <img class="logo" src="img/logo.png" alt="">
+    </a>
+  </nav>
+
+  <main class="hero">
+    <section class="image-showcase" aria-label="">
+      <img src="img/Fiong.jpg" alt="">
+    </section>
+    <div class="official-address">官方地址</div>
+    <div class="address-buttons">
+      <a class="address-button" href="https://www.iwon42413.net">官方网址</a>
+      <a class="address-button" href="https://www.iwon42413.net">备用地址</a>
+      <a class="address-button" href="https://www.iwon42413.net">备用地址</a>
+    </div>
+    <div class="official-description">
+      <p>赢博是一个领先的线上博彩游戏网站，创新始于2016年开始专注于赢博最擅长的体育博彩领域，投资合适的人才，不断完善网站并且追求完美。赢博（www.iwon88.cn）由科摩罗联盟昂儒昂自治岛（Autonomous Island of Anjouan, Union of Comoros）政府颁发执照（执照号： ALSI-202503001-F11）并接受其监管。赢博（www.iwon88.cn）已通过所有合规认证，并获得合法授权，为使用者提供体育博彩、真人娱乐博彩、多款老虎机游戏及其他博彩游戏。</p>
+      <p>赢博的企业理念</p>
+      <p>数年来，赢博为客户提供精确球盘赛事。赢通过创新开发新的博彩产品及服务为玩家提供更多有吸引力的网站设施以及尽最大的能力供给最好的优惠福利。秉持客户为先的理念，为每个玩家提供一个安全可靠，公平公正的博彩游戏环境。客服全天候 24/7 在线解决您的所有问题。玩家对网站的满意度成就赢博。</p>
+    </div>
+  </main>
+
+  <img class="fixed-bottom-image" src="img/Diong.jpg" alt="">
+</body>
+</html>
