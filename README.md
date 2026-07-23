@@ -13,6 +13,13 @@
 - [赢博官方渠道](https://iwon88.cn/official-channels.html)
 - [站点地图](https://iwon88.cn/site-map.html)
 
+## 信任与合规说明
+
+- [赢博牌照说明](https://iwon88.cn/license.html)
+- [赢博理性娱乐](https://iwon88.cn/responsible-gaming.html)
+- [赢博隐私说明](https://iwon88.cn/privacy.html)
+- [赢博服务条款](https://iwon88.cn/terms.html)
+
 ## 公开资料
 
 - [赢博 iwon88 品牌资料](BRAND.md)
@@ -26,6 +33,8 @@
 赢博官网：https://iwon88.cn/
 赢博官方地址：https://iwon88.cn/official-address.html
 赢博 iwon88 官网：https://iwon88.cn/yingbo-guanwang.html
+赢博牌照说明：https://iwon88.cn/license.html
+赢博理性娱乐：https://iwon88.cn/responsible-gaming.html
 ```
 
 请不要隐藏链接、批量堆砌关键词或使用来源不明的跳转链接。
