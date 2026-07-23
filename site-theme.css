@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --yb-gold: #FFB80C;
   --yb-gold-deep: #D89000;
@@ -11,20 +15,52 @@
 
 html,
 body {
+  margin: 0;
+  min-height: 100vh;
   background: var(--yb-black) !important;
   color: var(--yb-text) !important;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 5px clamp(16px, 5vw, 72px);
   background: var(--yb-gold) !important;
   color: var(--yb-panel-dark) !important;
   border-bottom: 0 !important;
   box-shadow: none !important;
 }
 
+.logo {
+  display: block;
+  width: 75px;
+  height: auto;
+}
+
+.nav-spacer {
+  width: 75px;
+  flex: 0 0 auto;
+}
+
 .site-title,
 .nav-title {
+  margin: 0;
   color: var(--yb-panel-dark) !important;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
 }
 
 main,
@@ -42,16 +78,41 @@ main,
   background: var(--yb-black) !important;
 }
 
+.visual img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .visual img,
 .merged-carousel {
   box-shadow: none !important;
+}
+
+.content {
+  margin: 30px auto 38px;
+  line-height: 1.78;
 }
 
 h1,
 .official-address,
 .faq-title,
 .content h1 {
+  margin: 0;
   color: var(--yb-text) !important;
+  font-size: clamp(26px, 5vw, 44px);
+  line-height: 1.15;
+  text-align: center;
+}
+
+.lead {
+  margin: 16px auto 0;
+  max-width: 820px;
+  font-size: clamp(13px, 1.9vw, 16px);
+  font-weight: 700;
+  text-align: center;
 }
 
 .lead,
@@ -62,6 +123,32 @@ p,
 .faq-answer,
 .official-description p {
   color: var(--yb-muted) !important;
+}
+
+.keyword-nav,
+.navlinks,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.link-grid,
+.map-list,
+.service-grid,
+.trust-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.link-grid,
+.map-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .section-block,
@@ -96,10 +183,17 @@ p,
 .keyword-link,
 .keyword-nav a,
 .navlinks a {
-  border-color: var(--yb-line) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 1px solid var(--yb-line) !important;
   border-radius: 0 !important;
   background: var(--yb-panel) !important;
   color: var(--yb-text) !important;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .keyword-link:hover,
@@ -112,10 +206,16 @@ p,
 .address-button,
 .actions a,
 body main a.btn-primary {
-  border-color: var(--yb-gold) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--yb-gold) !important;
   border-radius: 0 !important;
   background: var(--yb-gold) !important;
   color: var(--yb-panel-dark) !important;
+  font-weight: 800;
   box-shadow: none !important;
   text-shadow: none !important;
 }
@@ -131,7 +231,10 @@ body main a.btn-primary {
 .link-grid a,
 .map-list a,
 .copy-box {
+  display: block;
+  min-height: 76px;
   overflow: hidden;
+  padding: 13px 14px;
   border: 0 !important;
   border-radius: 0 !important;
   background: var(--yb-panel) !important;
@@ -159,6 +262,9 @@ body main a.btn-primary {
 .map-list span,
 .copy-box {
   color: var(--yb-muted) !important;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.6;
 }
 
 .promo-section {
@@ -262,7 +368,6 @@ body > main > .content {
   padding-bottom: 18px;
 }
 
-body:has(main > img.fixed-bottom-image),
 .fixed-bottom-image {
   background: var(--yb-black) !important;
 }
@@ -275,6 +380,15 @@ body:has(main > img.fixed-bottom-image),
 }
 
 @media (max-width: 640px) {
+  .logo,
+  .nav-spacer {
+    width: 70px;
+  }
+
+  .visual img {
+    max-height: 250px;
+  }
+
   .section-block,
   .content,
   .official-description,
@@ -293,5 +407,11 @@ body:has(main > img.fixed-bottom-image),
 
   .address-buttons {
     grid-template-columns: 1fr !important;
+  }
+
+  .keyword-nav a,
+  .navlinks a,
+  .actions a {
+    flex: 1 1 150px;
   }
 }
