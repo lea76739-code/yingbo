@@ -372,6 +372,21 @@ body > main > .content {
   background: var(--yb-black) !important;
 }
 
+.official-address,
+.hero > .entry-summary,
+.keyword-links .keyword-link {
+  color: var(--yb-gold) !important;
+}
+
+.keyword-links .keyword-link {
+  border-color: rgba(255, 184, 12, 0.58) !important;
+}
+
+.keyword-links .keyword-link:hover {
+  background: var(--yb-gold) !important;
+  color: var(--yb-panel-dark) !important;
+}
+
 @media (max-width: 980px) {
   .promo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
