@@ -101,7 +101,7 @@ h1,
 .faq-title,
 .content h1 {
   margin: 0;
-  color: var(--yb-text) !important;
+  color: var(--yb-gold) !important;
   font-size: clamp(26px, 5vw, 44px);
   line-height: 1.15;
   text-align: center;
@@ -116,7 +116,10 @@ h1,
 }
 
 .lead,
-.entry-summary,
+.entry-summary {
+  color: var(--yb-gold) !important;
+}
+
 .section-copy,
 .responsible-note,
 p,
