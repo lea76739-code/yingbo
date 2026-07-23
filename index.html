@@ -42,7 +42,10 @@
           "url": "https://iwon88.cn/img/logo.png",
           "width": 143,
           "height": 55
-        }
+        },
+        "sameAs": [
+          "https://github.com/Xingchen1688/yingbo"
+        ]
       },
       {
         "@type": "WebSite",
@@ -119,13 +122,16 @@
   }
   </script>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     :root {
       --navbar-height: 38px;
       --bottom-image-height: calc(100vw * 742 / 2120);
+      --ink: #2d2400;
+      --gold: #ffb80c;
+      --gold-deep: #d89000;
+      --panel: rgba(255, 255, 255, 0.2);
+      --line: rgba(45, 36, 0, 0.24);
     }
 
     body {
@@ -135,8 +141,8 @@
       display: flex;
       flex-direction: column;
       font-family: "Microsoft YaHei", Arial, sans-serif;
-      color: #2d2400;
-      background: #ffb80c;
+      color: var(--ink);
+      background: var(--gold);
     }
 
     .navbar {
@@ -150,42 +156,25 @@
       justify-content: space-between;
       height: var(--navbar-height);
       padding: 4px clamp(18px, 5vw, 72px);
-      background: #ffb80c;
+      background: var(--gold);
       border-bottom: 1px solid rgba(45, 36, 0, 0.12);
       box-shadow: 0 8px 24px rgba(111, 88, 0, 0.12);
     }
 
-    .logo {
-      display: block;
-      width: 75px;
-      height: auto;
-    }
+    .logo { display: block; width: 75px; height: auto; }
 
     .site-title {
       margin: 0;
-      color: #2d2400;
+      color: var(--ink);
       font-size: clamp(14px, 2.2vw, 18px);
       font-weight: 800;
       line-height: 1.2;
       text-align: center;
     }
 
-    .nav-spacer {
-      width: 75px;
-      flex: 0 0 auto;
-    }
-
-    .hero {
-      flex: 1 0 auto;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    .image-showcase {
-      display: grid;
-      gap: 0;
-    }
+    .nav-spacer { width: 75px; flex: 0 0 auto; }
+    .hero { flex: 1 0 auto; width: 100%; margin: 0 auto; padding: 0; }
+    .image-showcase { display: grid; gap: 0; }
 
     .image-showcase img {
       display: block;
@@ -214,9 +203,7 @@
       animation: source-carousel-slide 30s infinite;
     }
 
-    .source-carousel:hover .source-carousel-track {
-      animation-play-state: paused;
-    }
+    .source-carousel:hover .source-carousel-track { animation-play-state: paused; }
 
     .source-slide {
       flex: 0 0 16.6667%;
@@ -246,30 +233,32 @@
       margin: 34px 0 0;
       text-align: center;
       font-size: clamp(18px, 3vw, 28px);
-      font-weight: 700;
-      color: #2d2400;
+      font-weight: 800;
+      color: var(--ink);
     }
 
     .entry-summary {
       width: min(980px, calc(100% - 32px));
       margin: 16px auto 0;
-      color: #2d2400;
+      color: var(--ink);
       font-size: clamp(12px, 1.7vw, 15px);
       font-weight: 700;
       line-height: 1.75;
       text-align: center;
     }
 
-    .keyword-links {
+    .keyword-links,
+    .service-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      width: min(900px, calc(100% - 32px));
+      width: min(980px, calc(100% - 32px));
       margin: 16px auto 0;
     }
 
-    .keyword-link {
+    .keyword-link,
+    .service-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -277,87 +266,17 @@
       padding: 7px 14px;
       border: 1px solid rgba(45, 36, 0, 0.28);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.2);
-      color: #2d2400;
+      background: var(--panel);
+      color: var(--ink);
       font-size: 13px;
       font-weight: 800;
       line-height: 1.25;
       text-decoration: none;
     }
 
-    .keyword-link:hover {
-      background: rgba(255, 255, 255, 0.32);
-    }
-
-    .official-description {
-      width: min(980px, calc(100% - 32px));
-      margin: 18px auto 28px;
-      color: #2d2400;
-      font-size: clamp(9px, 1.35vw, 11px);
-      font-weight: 600;
-      line-height: 1.8;
-      text-align: left;
-    }
-
-    .official-description p {
-      margin: 0 0 14px;
-    }
-
-    .official-description a {
-      color: #2d2400;
-      font-weight: 800;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .description-heading {
-      margin: 0 0 14px;
-      font-size: inherit;
-      font-weight: 800;
-      line-height: inherit;
-    }
-
-    .faq {
-      width: min(980px, calc(100% - 32px));
-      margin: 0 auto 30px;
-      color: #2d2400;
-      font-size: clamp(10px, 1.45vw, 12px);
-      font-weight: 600;
-      line-height: 1.75;
-    }
-
-    .faq-title {
-      margin: 0 0 12px;
-      font-size: clamp(14px, 2vw, 18px);
-      font-weight: 800;
-      line-height: 1.4;
-      text-align: center;
-    }
-
-    .faq-list {
-      margin: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .faq-question {
-      margin: 0 0 4px;
-      font-weight: 800;
-    }
-
-    .faq-answer {
-      margin: 0;
-    }
-
-    .responsible-note {
-      width: min(980px, calc(100% - 32px));
-      margin: 0 auto 30px;
-      color: #2d2400;
-      font-size: clamp(10px, 1.45vw, 12px);
-      font-weight: 700;
-      line-height: 1.7;
-      text-align: center;
-    }
+    .keyword-link:hover,
+    .service-link:hover,
+    .promo-card:hover { background: rgba(255, 255, 255, 0.32); }
 
     .address-buttons {
       display: grid;
@@ -375,19 +294,156 @@
       padding: clamp(8px, 2vw, 12px) clamp(10px, 2.5vw, 22px);
       border: 1px solid rgba(45, 36, 0, 0.5);
       border-radius: 8px;
-      background: linear-gradient(180deg, #ffe66b 0%, #ffc321 48%, #d89000 100%);
+      background: linear-gradient(180deg, #ffe66b 0%, #ffc321 48%, var(--gold-deep) 100%);
       color: #231a00;
       font-size: clamp(13px, 2.8vw, 22px);
       font-weight: 800;
       text-decoration: none;
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.62),
-        0 8px 18px rgba(45, 36, 0, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62), 0 8px 18px rgba(45, 36, 0, 0.18);
     }
 
-    .address-button:hover {
-      background: linear-gradient(180deg, #fff08a 0%, #ffca2e 48%, #df9700 100%);
+    .address-button:hover { background: linear-gradient(180deg, #fff08a 0%, #ffca2e 48%, #df9700 100%); }
+
+    .section-block {
+      width: min(980px, calc(100% - 32px));
+      margin: 24px auto 0;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: clamp(16px, 2.2vw, 22px);
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .section-copy {
+      margin: 0 auto 14px;
+      color: var(--ink);
+      font-size: clamp(11px, 1.5vw, 13px);
+      font-weight: 650;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .service-card,
+    .trust-item {
+      min-height: 86px;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .service-card strong,
+    .trust-item strong,
+    .promo-card strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: clamp(13px, 1.7vw, 16px);
+      line-height: 1.35;
+    }
+
+    .service-card span,
+    .trust-item span,
+    .promo-card span {
+      display: block;
+      font-size: clamp(10px, 1.35vw, 12px);
+      font-weight: 650;
+      line-height: 1.6;
+    }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .promo-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .promo-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #f3bd00;
+    }
+
+    .promo-body { padding: 11px 12px 13px; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .official-description {
+      width: min(980px, calc(100% - 32px));
+      margin: 24px auto 28px;
+      color: var(--ink);
+      font-size: clamp(9px, 1.35vw, 11px);
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    .official-description p { margin: 0 0 14px; }
+    .official-description a { color: var(--ink); font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    .description-heading {
+      margin: 0 0 14px;
+      font-size: inherit;
+      font-weight: 800;
+      line-height: inherit;
+    }
+
+    .faq {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto 30px;
+      color: var(--ink);
+      font-size: clamp(10px, 1.45vw, 12px);
+      font-weight: 600;
+      line-height: 1.75;
+    }
+
+    .faq-title {
+      margin: 0 0 12px;
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .faq-list { margin: 0; display: grid; gap: 12px; }
+    .faq-question { margin: 0 0 4px; font-weight: 800; }
+    .faq-answer { margin: 0; }
+
+    .responsible-note {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto 30px;
+      color: var(--ink);
+      font-size: clamp(10px, 1.45vw, 12px);
+      font-weight: 700;
+      line-height: 1.7;
+      text-align: center;
     }
 
     .fixed-bottom-image {
@@ -400,52 +456,30 @@
       pointer-events: none;
     }
 
+    @media (max-width: 820px) {
+      .service-grid,
+      .promo-grid,
+      .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 640px) {
-      .navbar {
-        align-items: center;
-      }
-
-      .logo {
-        width: 70px;
-      }
-
-      .site-title {
-        font-size: 14px;
-      }
-
-      .nav-spacer {
-        width: 70px;
-      }
-
-      .source-carousel {
-        width: calc(100% - 20px);
-        margin-top: 14px;
-      }
-
-      .address-buttons {
-        gap: 8px;
-      }
-
-      .keyword-link {
-        flex: 1 1 128px;
-      }
+      .navbar { align-items: center; }
+      .logo { width: 70px; }
+      .site-title { font-size: 14px; }
+      .nav-spacer { width: 70px; }
+      .source-carousel { width: calc(100% - 20px); margin-top: 14px; }
+      .address-buttons { gap: 8px; }
+      .keyword-link,
+      .service-link { flex: 1 1 128px; }
+      .service-grid,
+      .promo-grid,
+      .trust-grid { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .source-carousel {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-      }
-
-      .source-carousel-track {
-        width: auto;
-        animation: none;
-      }
-
-      .source-slide {
-        flex: 0 0 100%;
-        scroll-snap-align: center;
-      }
+      .source-carousel { overflow-x: auto; scroll-snap-type: x mandatory; }
+      .source-carousel-track { width: auto; animation: none; }
+      .source-slide { flex: 0 0 100%; scroll-snap-align: center; }
     }
   </style>
 </head>
@@ -462,6 +496,7 @@
     <section class="image-showcase" aria-label="赢博官网官方入口主视觉">
       <img src="img/Fiong.jpg" width="2172" height="724" alt="赢博官网 iwon88 官方入口与官方地址主视觉" fetchpriority="high" decoding="async">
     </section>
+
     <section class="source-carousel" aria-label="赢博官网首页轮播图">
       <div class="source-carousel-track">
         <a class="source-slide" href="https://www.iwon42413.net/promotion/promotionContent.aspx?ID=1" rel="noopener"><img src="https://res.iwonresource.com/Home/P_20260603125215_797.jpg" width="2000" height="600" loading="lazy" decoding="async" alt="赢博官网首页轮播图 开局占先机 体育畅玩一步到位"></a>
@@ -472,20 +507,59 @@
         <a class="source-slide" href="https://www.iwon42413.net/" rel="noopener"><img src="https://res.iwonresource.com/Home/P_20231114140547_334.png" width="2000" height="600" loading="lazy" decoding="async" alt="赢博官网首页轮播图 品牌活动横幅"></a>
       </div>
     </section>
+
     <h2 class="official-address">赢博官网官方地址</h2>
     <p class="entry-summary">这里是赢博官网入口页，用于整理赢博 iwon88 官方地址、iwon88.cn 备用通道、品牌服务说明与理性娱乐提示，帮助用户识别当前可访问的赢博官方入口。</p>
+
     <div class="keyword-links" aria-label="赢博关键词专题">
       <a class="keyword-link" href="/yingbo-guanwang.html">赢博官网专题</a>
       <a class="keyword-link" href="/yingbo.html">赢博品牌说明</a>
       <a class="keyword-link" href="/official-address.html">赢博官方地址</a>
       <a class="keyword-link" href="/safe-access.html">安全访问</a>
       <a class="keyword-link" href="/about.html">关于赢博</a>
+      <a class="keyword-link" href="/official-channels.html">官方渠道</a>
     </div>
+
     <div class="address-buttons" aria-label="赢博官网官方访问入口">
       <a class="address-button" href="https://www.iwon42413.net" rel="noopener">赢博官网入口</a>
       <a class="address-button" href="https://www.iwon42413.net" rel="noopener">赢博官方地址</a>
       <a class="address-button" href="https://www.iwon42413.net" rel="noopener">iwon88备用地址</a>
     </div>
+
+    <section class="section-block" aria-label="赢博平台服务导航">
+      <h2 class="section-title">赢博平台服务导航</h2>
+      <p class="section-copy">参考 www.iwon42413.net 首页栏目，整理体育平台、真人娱乐、棋牌、电竞、彩票和优惠活动入口，方便用户从 iwon88.cn 快速识别官方服务范围。</p>
+      <div class="service-grid">
+        <a class="service-card" href="https://www.iwon42413.net/games/PSport.aspx" rel="noopener"><strong>体育平台</strong><span>覆盖热门体育赛事入口，适合查找赢博体育相关服务。</span></a>
+        <a class="service-card" href="https://www.iwon42413.net/games/Casino_Live.aspx" rel="noopener"><strong>真人娱乐场</strong><span>整理真人娱乐入口，访问前请核对官方地址。</span></a>
+        <a class="service-card" href="https://www.iwon42413.net/games/SlotGames.aspx" rel="noopener"><strong>棋牌&游戏</strong><span>提供棋牌和电子游戏栏目入口说明。</span></a>
+        <a class="service-card" href="https://www.iwon42413.net/games/PSport.aspx?GameType=e-sports" rel="noopener"><strong>电竞游戏</strong><span>聚合电竞相关服务入口，便于用户快速识别。</span></a>
+        <a class="service-card" href="https://www.iwon42413.net/games/GBSport.aspx?Type=SSC" rel="noopener"><strong>赢博彩票</strong><span>对应赢博彩票栏目，建议从官方入口访问。</span></a>
+        <a class="service-card" href="https://www.iwon42413.net/promotions/PromotionList.aspx" rel="noopener"><strong>优惠活动</strong><span>查看官方活动列表和最新公告信息。</span></a>
+      </div>
+    </section>
+
+    <section class="section-block" aria-label="赢博活动精选">
+      <h2 class="section-title">赢博活动精选</h2>
+      <p class="section-copy">以下活动图来自 www.iwon42413.net 首页活动区域，用于增强 iwon88.cn 的品牌一致性和入口识别度。</p>
+      <div class="promo-grid">
+        <a class="promo-card" href="https://www.iwon42413.net/promotion/promotionContent.aspx?ID=213" rel="noopener"><img src="https://res.iwonresource.com/Other/P_20260603130811_613.jpg" width="900" height="506" loading="lazy" decoding="async" alt="赢博活动精选 新手30天挑战"><span class="promo-body"><strong>新手30天挑战</strong><span>面向新用户的流水挑战活动，可通过官方活动页查看规则。</span></span></a>
+        <a class="promo-card" href="https://www.iwon42413.net/promotion/promotionContent.aspx?ID=208" rel="noopener"><img src="https://res.iwonresource.com/Other/P_20260603131217_22.jpg" width="900" height="506" loading="lazy" decoding="async" alt="赢博活动精选 转会彩金"><span class="promo-body"><strong>转会至赢博</strong><span>适合从其他平台迁移的用户查看官方转会活动说明。</span></span></a>
+        <a class="promo-card" href="https://www.iwon42413.net/promotion/promotionContent.aspx?ID=198" rel="noopener"><img src="https://res.iwonresource.com/Other/P_20231114133937_71.png" width="900" height="506" loading="lazy" decoding="async" alt="赢博活动精选 电竞活动"><span class="promo-body"><strong>电竞活动</strong><span>围绕电竞娱乐体验整理活动入口，请以官方页面为准。</span></span></a>
+        <a class="promo-card" href="https://www.iwon42413.net/promotion/promotionContent.aspx?ID=170" rel="noopener"><img src="https://res.iwonresource.com/Other/P_20260603125916_759.jpg" width="900" height="506" loading="lazy" decoding="async" alt="赢博活动精选 数字货币活动"><span class="promo-body"><strong>数字货币存款返现</strong><span>数字货币存款相关活动入口，具体规则以官方说明为准。</span></span></a>
+      </div>
+    </section>
+
+    <section class="section-block" aria-label="赢博官网信任信息">
+      <h2 class="section-title">赢博官网访问信息</h2>
+      <div class="trust-grid">
+        <div class="trust-item"><strong>官方入口</strong><span>通过 iwon88.cn 核对赢博官网、官方地址和备用网址。</span></div>
+        <div class="trust-item"><strong>服务范围</strong><span>体育、真人、棋牌、电竞、彩票和活动栏目均从官方通道访问。</span></div>
+        <div class="trust-item"><strong>牌照说明</strong><span>页面展示昂儒昂自治岛政府执照信息，便于用户核验。</span></div>
+        <div class="trust-item"><strong>安全提醒</strong><span>避免陌生短链接和仿冒页面，访问前确认所在地法律要求。</span></div>
+      </div>
+    </section>
+
     <div class="official-description">
       <h2 class="description-heading">赢博官网入口说明</h2>
       <p>赢博官网是赢博 iwon88 用户查找官方入口和官方地址的聚合页面。本页以 iwon88.cn 为主域名，集中展示赢博官方访问入口、备用网址、品牌服务说明和牌照信息，方便用户在搜索“赢博官网”或“赢博”时识别当前可访问的官方通道。</p>
@@ -496,6 +570,7 @@
       <h2 class="description-heading">安全访问赢博官网与理性娱乐</h2>
       <p>请通过本页公布的赢博官网入口、<a href="/yingbo-guanwang.html">赢博官网专题页</a>、<a href="/yingbo.html">赢博品牌说明页</a>或 <a href="/safe-access.html">安全访问说明</a> 核对访问路径，并在访问前确认当地法律规定、年龄要求和相关风险。客服全天候 24/7 在线处理访问、账户和服务相关问题，用户应保持理性娱乐。</p>
     </div>
+
     <section class="faq" aria-label="赢博官网常见问题">
       <h2 class="faq-title">赢博官网常见问题</h2>
       <div class="faq-list">
